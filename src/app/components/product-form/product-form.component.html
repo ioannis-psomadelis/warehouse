@@ -1,0 +1,57 @@
+<div [formGroup]="newProductForm" class="p-fluid">
+  <div class="p-field mb-3">
+    <label for="product-name" class="block mb-2">Όνομα</label>
+    <input
+      pInputText
+      id="product-name"
+      name="product-name"
+      formControlName="name"
+      required
+      class="w-full"
+    />
+  </div>
+  <div class="p-field mb-3">
+    <label for="product-description" class="block mb-2">Περιγραφή</label>
+    <textarea
+      pInputTextarea
+      id="product-description"
+      name="product-description"
+      formControlName="description"
+      required
+      rows="3"
+      class="w-full"
+    ></textarea>
+  </div>
+  <div class="p-field mb-3">
+    <label for="product-quantity" class="block mb-2">Ποσότητα</label>
+    <p-inputNumber
+      id="product-quantity"
+      name="product-quantity"
+      formControlName="quantity"
+      [min]="0"
+      required
+      class="w-full"
+    ></p-inputNumber>
+  </div>
+  <div class="p-field mb-3">
+    <label for="product-price" class="block mb-2">Τιμή</label>
+    <p-inputNumber
+      id="product-price"
+      name="product-price"
+      formControlName="price"
+      [min]="0"
+      [minFractionDigits]="2"
+      [maxFractionDigits]="2"
+      mode="currency"
+      currency="EUR"
+      required
+      class="w-full"
+    ></p-inputNumber>
+  </div>
+  <p-button
+    label=" {{ product ? 'Επεξεργασία' : 'Προσθήκη' }} "
+    [disabled]="!newProductForm.valid"
+    class="w-full"
+    (onClick)="addProduct()"
+  ></p-button>
+</div>

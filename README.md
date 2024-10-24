@@ -2,26 +2,70 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
 
-## Development server
+[DEMO](https://warehouse-ioannis-psomadelis.vercel.app/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Table of Contents
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Components](#components)
+- [Services](#services)
+- [Models](#models)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Code scaffolding
+## Introduction
+Warehouse is an Angular-based application designed to manage and display a list of products. It includes features such as user authentication, product listing, and messaging services.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
+To run this project locally, follow these steps:
 
-## Build
+1. **Clone the repository:**
+   ```
+   git clone https://github.com/ioannis-psomadelis/warehouse.git
+   cd warehouse
+   ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. **Install dependencies:**
+   ```
+   npm install
+   ```
 
-## Running unit tests
+3. **Run the application:**
+   ```
+   ng serve
+   ```
+   Navigate to `http://localhost:4200/` in your browser to see the application in action.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Usage
+- **Login:** Users can log in using the login component.
+    - **Role:** admin
+        -- **Username:** admin
+        -- **Password:** admin
+    - **Role:** user
+        -- **Username:** user
+        -- **Password:** user
+- **Product List:** View a list of products with details.
+- **Product Actions:** (Only for admin)
+    - **Add:** Add a new product.
+    - **Edit:** Edit an existing product.
+    - **Delete:** Delete a product.
 
-## Running end-to-end tests
+## Project Structure
+The project is organized as follows:
+- **src/app/features/dashboard:** Contains the dashboard component for routing
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **src/app/components:** Contains the Angular components.
+  - **login:** Handles user authentication.
+  - **product-list:** Displays the list of products.
+  - **product-form:** Handles the product form (add-edit).
 
-## Further help
+- **src/app/shared/models:** Contains data models used across the application.
+  - **product.model.ts:** Defines the structure of a product object.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- **src/app/shared/services:** Contains services for handling business logic and data management.
+  - **auth.service.ts:** Manages user authentication.
+  - **messaging.service.ts:** Handles messaging functionality.
+  - **session-storage.service.ts:** Manages session storage.
+  - **product.service.ts:** Provides product data and actions.

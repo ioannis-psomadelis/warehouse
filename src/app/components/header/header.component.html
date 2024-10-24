@@ -1,0 +1,34 @@
+<header class="layout-header surface-0 shadow-2">
+  <p-menubar [model]="menuItems" styleClass="px-4">
+    <ng-template pTemplate="start">
+      <img src="logo.svg" alt="logo" class="w-8rem" />
+    </ng-template>
+    <ng-template pTemplate="item" let-item let-root="root">
+      <a pRipple class="flex align-items-center p-menuitem-link">
+        <span [class]="item.icon"></span>
+        <span class="ml-2">{{ item.label }}</span>
+        <span
+          *ngIf="item.shortcut"
+          class="ml-auto border-1 surface-border border-round surface-100 text-xs p-1"
+          >{{ item.shortcut }}</span
+        >
+      </a>
+    </ng-template>
+    <ng-template pTemplate="end">
+      <ng-container *ngIf="isLoggedIn(); else loginButton">
+        <p-button
+          label="Logout"
+          (onClick)="logout()"
+          styleClass="p-button-primary"
+        ></p-button>
+      </ng-container>
+    </ng-template>
+    <ng-template #loginButton>
+      <p-button
+        label="Login"
+        (onClick)="login()"
+        styleClass="p-button-raised"
+      ></p-button>
+    </ng-template>
+  </p-menubar>
+</header>
