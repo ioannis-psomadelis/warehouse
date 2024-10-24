@@ -41,11 +41,11 @@ To run this project locally, follow these steps:
 ## Usage
 - **Login:** Users can log in using the login component.
     - **Role:** admin
-        -- **Username:** admin
-        -- **Password:** admin
+        - **Username:** admin
+        - **Password:** admin
     - **Role:** user
-        -- **Username:** user
-        -- **Password:** user
+        - **Username:** user
+        - **Password:** user
 - **Product List:** View a list of products with details.
 - **Product Actions:** (Only for admin)
     - **Add:** Add a new product.
