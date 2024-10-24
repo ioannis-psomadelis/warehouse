@@ -11,4 +11,8 @@ export class SessionStorageService {
   getItem(key: string): string | null {
     return sessionStorage.getItem(key);
   }
-this.sessionStorageService.removeItem
+
+  removeItem(key: string): void {
+    sessionStorage.removeItem(key);
+  }
+}
