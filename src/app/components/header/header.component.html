@@ -17,7 +17,7 @@
     <ng-template pTemplate="end">
       <ng-container *ngIf="isLoggedIn(); else loginButton">
         <p-button
-          label="Logout"
+          label="Αποσύνδεση"
           (onClick)="logout()"
           styleClass="p-button-primary"
         ></p-button>
@@ -25,7 +25,7 @@
     </ng-template>
     <ng-template #loginButton>
       <p-button
-        label="Login"
+        label="Σύνδεση"
         (onClick)="login()"
         styleClass="p-button-raised"
       ></p-button>

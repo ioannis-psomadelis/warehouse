@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
 
-[DEMO](https://warehouse-ioannis-psomadelis.vercel.app/)
+[DEMO](https://warehouse-ten-rouge.vercel.app/)
 
 ## Table of Contents
 - [Introduction](#introduction)
